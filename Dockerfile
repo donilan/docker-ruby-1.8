@@ -9,18 +9,17 @@ ENV BUILD_PACKAGES="bash curl tzdata ca-certificates wget less ssh autoconf biso
     APP=/app
 
 RUN set -ex \
-    apt-get update && \
-    apt-get -y install software-properties-common && \
-    add-apt-repository -y ppa:brightbox/ruby-ng && \
+    && apt-get update \
+    && apt-get -y install software-properties-common \
+    && add-apt-repository -y ppa:brightbox/ruby-ng \
     && apt-get install -qq -y --force-yes build-essential --fix-missing --no-install-recommends \
     $BUILD_PACKAGES \
     $DEV_PACKAGES \
     $RUBY_PACKAGES \
-    apt-get update && apt-get -y install git  && \
-    mkdir -p "$APP" && \
-    echo 'gem: --no-document' > /usr/local/etc/gemrc && \
-    rm -rf /var/lib/apt/lists/* && \
-    apt-get clean
+    && mkdir -p "$APP" \
+    && echo 'gem: --no-document' > /usr/local/etc/gemrc \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
 WORKDIR $APP
 
