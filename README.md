@@ -1,0 +1,1 @@
+# docker-ruby-1.8
