@@ -12,6 +12,7 @@ RUN set -ex \
     && apt-get update \
     && apt-get -y install software-properties-common \
     && add-apt-repository -y ppa:brightbox/ruby-ng \
+    && apt-get update \
     && apt-get install -qq -y --force-yes build-essential --fix-missing --no-install-recommends \
     $BUILD_PACKAGES \
     $DEV_PACKAGES \
