@@ -19,7 +19,7 @@ RUN set -ex \
     apt-get update && apt-get -y install git  && \
     mkdir -p "$APP" && \
     echo 'gem: --no-document' > /usr/local/etc/gemrc && \
-    rm -rf /var/lib/apt/lists/* &&
+    rm -rf /var/lib/apt/lists/* && \
     apt-get clean
 
 WORKDIR $APP
