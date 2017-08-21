@@ -4,7 +4,7 @@ MAINTAINER Doni <doni.leong@gmail.com>
 #Install Ruby 1.8
 
 ENV BUILD_PACKAGES="bash curl tzdata ca-certificates wget less ssh autoconf bison " \
-    DEV_PACKAGES="ruby1.8 ruby1.8-dev rubygems1.8 libc-dev libffi-dev libmysqlclient-dev libxml2-dev libxslt-dev libgmp3-dev libgdbm3 libgdbm-dev libmysqlclient-dev libncurses5-dev libreadline-dev  libssl-dev libyaml-dev zlib1g-dev software-properties-common" \
+    DEV_PACKAGES="ruby1.8 ruby1.8-dev rubygems1.8 libc-dev libffi-dev libmysqlclient-dev libsqlite3-dev libxml2-dev libxslt-dev libgmp3-dev libgdbm3 libgdbm-dev libmysqlclient-dev libncurses5-dev libreadline-dev  libssl-dev libyaml-dev zlib1g-dev software-properties-common" \
     RUBY_PACKAGES="git openssl" \
     APP=/app
 
